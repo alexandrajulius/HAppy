@@ -1,7 +1,7 @@
-# HAppy 
-A **H**ttp **Ap**plication in **Py**thon. 🙃
+# HAppy 🙃
+A **H**ttp **Ap**plication in **Py**thon - or an attempt to create a minimalistic web framework.
 
-Work in progress pet project that provides
+This is a work in progress pet project that provides
   * a server running a http handler that can respond to GET requests
 
 Eventually there will be
