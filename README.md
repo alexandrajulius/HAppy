@@ -1,5 +1,5 @@
 # HAppy 
-A **H**ttp **Ap**plication in **Py**thon. ![happy](https://user-images.githubusercontent.com/23189414/105613130-e9a5e700-5dc0-11eb-83fc-23245174fdb5.png)
+A **H**ttp **Ap**plication in **Py**thon. 🙃
 
 Work in progress pet project that provides
   * a server running a http handler that can respond to GET requests
