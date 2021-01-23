@@ -1,8 +1,8 @@
 import os
-# get all filepaths from root node recursivley
+# gets all filepaths from root node recursivley
 
+# TODO signature does not work with types when starting server
 # def list_tree(root: str) -> list:
-# not working when running the server, why?
 
 
 def list_tree(root):

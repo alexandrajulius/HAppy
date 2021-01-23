@@ -1,7 +1,7 @@
 from hamcrest import assert_that, equal_to
 from unittest.mock import patch
 from happy_server.response import generate_response, Response
-# TODO : add ignored files
+
 
 # gotcha I: in the mock we need to import the mocked dependency
 #           from where it is called (happy_server.response.list_tree),

@@ -1,10 +1,10 @@
 from collections import namedtuple
 from directory_tree import list_tree
-# does work for tests but not for server
+# TODO import directory_tree works for runnning server but not for tests:
 # from happy_server.directory_tree import list_tree
 
 Response = namedtuple('Response', ['response_code', 'content_type', 'body'])
-# signature does not work with types
+# TODO signature does not work with types when starting server
 # def generate_response(path: str) -> Response:
 
 
@@ -15,7 +15,7 @@ def generate_response(path):
 
     if ((path == "/") or (path in file_list)):
         response_code = 200
-        # todo content_type: what about text/plain?
+        # TODO content_type: what about text/plain?
         if path == '/':
             content_type = 'text/html'
             # use context manager "with" to open file
