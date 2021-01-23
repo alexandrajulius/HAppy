@@ -11,23 +11,23 @@ Eventually there will be
   * authentication handling
 
 ## Usage
-Start the http web server on your local with
+Start the http server on your local with
 ```
-python happy.py
+$ python happy.py
 ```
 Then in your browser visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
 
-An http web server is a process that is running on your machine and does two things:
+An http server is a process that is running on your machine and does two things:
 
   * Listen for incoming http requests on a specific TCP socket address (composed of an IP address and a port number)
   * Handle the request and sends a response back to the client.
 
-For now the incoming requests are solely GET requests, the responses are HTML files.
+For now the incoming requests are solely GET requests, the responses are HTML and image files.
 
 ### Note
-You could also start a Python web server without any coding doing
+You could also start a built-in Python http server without any coding:
 ```
-python3 -m http.server 8080
+$ python3 -m http.server 8080
 ```
 but then you could not have a customised http handler.
 
