@@ -2,11 +2,12 @@
 A **H**ttp **Ap**plication in **Py**thon - or an attempt to create a minimalistic web framework.
 
 This is a work in progress pet project that provides
-  * a server running a http handler that can respond to GET requests
+  * a server running a http handler that responds to GET requests with static HTML
 
 Eventually there will be
-  * responses to POST request
-  * a simple routing logic
+  * responses to POST requests
+  * a simple routing logic 
+  * dynamic HTML generation
   * asynchronous http handling
   * authentication handling
 
