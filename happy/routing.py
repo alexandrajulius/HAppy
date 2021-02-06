@@ -1,11 +1,11 @@
 # this works when running the server:
-# from config.routes import import_routes
-# from common import Response
+from config.routes import import_routes
+from common import Response
 
 
 # this works when running the tests:
-from happy.config.routes import import_routes
-from happy.common import Response
+# from happy.config.routes import import_routes
+# from happy.common import Response
 
 
 # def resolve(path: str) -> Response:

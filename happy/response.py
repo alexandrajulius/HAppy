@@ -1,13 +1,13 @@
 # TODO
 # this works when running the server:
-# from directory_tree import list_tree
-# from routing import resolve
-# from common import Response
+from directory_tree import list_tree
+from routing import resolve
+from common import Response
 
 # this works when running the tests:
-from happy.directory_tree import list_tree
-from happy.routing import resolve
-from happy.common import Response
+# from happy.directory_tree import list_tree
+# from happy.routing import resolve
+# from happy.common import Response
 
 
 # TODO content_type: text/plain and image
@@ -16,7 +16,7 @@ from happy.common import Response
 
 
 def generate_response(path):
-    file_list = list_tree('./public')
+    file_list = list_tree('./happy/public')
     for key, abs_path in enumerate(file_list):
         file_list[key] = abs_path.replace('public/', '')
 
