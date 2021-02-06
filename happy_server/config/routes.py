@@ -1,16 +1,17 @@
-from typing import Dict
+# from typing import Dict
 
 
-def import_routes() -> Dict:
+# TODO add action (index) and method (GET)
+# def import_routes() -> Dict:
+def import_routes():
     return {
+        'homepage': {
+            'controller': '/happy_server/src/index/controller/index_controller.py'
+        },
         'hello': {
-            'path': '/hello',
-            'controller': '/happy_server/src/hello/controller/hello_controller.py',
-            'action': 'index'
+            'controller': '/happy_server/src/hello/controller/hello_controller.py'
         },
         'cats/example': {
-            'path': '/cats/example',
-            'controller': '/happy_server/src/cats/controller/cats_controller.py',
-            'action': 'index'
+            'controller': '/happy_server/src/cats/controller/cats_controller.py'
         }
     }
