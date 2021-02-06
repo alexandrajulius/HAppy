@@ -1,5 +1,5 @@
 from hamcrest import assert_that, equal_to
-from happy_server.directory_tree import list_tree
+from happy.directory_tree import list_tree
 # TODO : add ignored files
 
 

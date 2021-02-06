@@ -1,6 +1,6 @@
 from hamcrest import assert_that, equal_to
-from happy_server.response import generate_response
-from happy_server.common import Response
+from happy.response import generate_response
+from happy.common import Response
 
 
 # gotcha I: in the mock we need to import the mocked dependency

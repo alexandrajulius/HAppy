@@ -1,4 +1,4 @@
-from happy_server.http_handler import Happy_Handler
+from happy.http_handler import Happy_Handler
 import socketserver
 
 PORT = 8080

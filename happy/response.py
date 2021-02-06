@@ -1,13 +1,13 @@
 # TODO
 # this works when running the server:
-from directory_tree import list_tree
-from routing import resolve
-from common import Response
+# from directory_tree import list_tree
+# from routing import resolve
+# from common import Response
 
 # this works when running the tests:
-# from happy_server.directory_tree import list_tree
-# from happy_server.routing import resolve
-# from happy_server.common import Response
+from happy.directory_tree import list_tree
+from happy.routing import resolve
+from happy.common import Response
 
 
 # TODO content_type: text/plain and image
