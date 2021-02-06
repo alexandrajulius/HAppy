@@ -1,13 +1,15 @@
 # HAppy 🙃
 A **H**ttp **Ap**plication in **Py**thon - or an attempt to create a minimalistic web framework.
 
-This is a work in progress pet project that provides
-  * a server running a http handler that responds to GET requests with static HTML
+This is a work in progress pet project that implements
+  * a server running a customised http handler that responds to GET requests 
+  * the handler passes the request url to a simple routing logic
+  * the routing logic maps the request to the related business logic 
+  * the business logic just returns static html so far
 
 Eventually there will be
+  * templating engine to generate HTML dynamically
   * responses to POST requests
-  * a simple routing logic 
-  * dynamic HTML generation
   * asynchronous http handling
   * authentication handling
 

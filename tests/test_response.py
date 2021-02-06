@@ -6,7 +6,7 @@ from happy_server.response import generate_response, Response
 # gotcha I: in the mock we need to import the mocked dependency
 #           from where it is called (happy_server.response.list_tree),
 #           not where it is defined (happy_server.directory_tree.list_tree)
-#            (https://docs.python.org/3/library/unittest.mock.html#where-to-patch)
+#           (https://docs.python.org/3/library/unittest.mock.html#where-to-patch)
 #
 # gotcha II: the order of the mocks in the signature of the test must be
 #            the inverse order from the decorator list (@patch)
@@ -14,7 +14,7 @@ from happy_server.response import generate_response, Response
 
 @patch('happy_server.response.list_tree', return_value=[])
 def test_generate_response_for_valid_html_request_index(mock_list_tree):
-    path = "/"
+    path = '/'
     response = generate_response(path)
     mock_list_tree.assert_called_once()
     with open('./tests/fixtures/public/index.html') as body:
@@ -28,7 +28,7 @@ def test_generate_response_for_valid_html_request_index(mock_list_tree):
     'public/hello/hello.html'
     ])
 def test_generate_response_for_valid_html_request_hello(mock_list_tree):
-    path = "hello/hello.html"
+    path = 'hello/hello.html'
     response = generate_response(path)
     mock_list_tree.assert_called_once()
     with open('./tests/fixtures/public/hello/hello.html') as body:
@@ -39,13 +39,13 @@ def test_generate_response_for_valid_html_request_hello(mock_list_tree):
 
 
 @patch('happy_server.response.list_tree', return_value=[
-    'public/example/example.html'
+    'public/cats/example/example.html'
     ])
 def test_generate_response_for_valid_html_request_example(mock_list_tree):
-    path = "example/example.html"
+    path = 'cats/example/example.html'
     response = generate_response(path)
     mock_list_tree.assert_called_once()
-    with open('./tests/fixtures/public/example/example.html') as body:
+    with open('./tests/fixtures/public/cats/example/example.html') as body:
         assert_that(response, equal_to(
             Response(200, 'text/html', body.read())
             )
@@ -54,7 +54,7 @@ def test_generate_response_for_valid_html_request_example(mock_list_tree):
 
 @patch('happy_server.response.list_tree', return_value=[])
 def test_generate_response_for_invalid_html_request(mock_list_tree):
-    path = "public/hello.html"
+    path = 'public/hello.html'
     response = generate_response(path)
     assert_that(response, equal_to(
         Response(404, 'text/html', '')
