@@ -7,7 +7,7 @@ This is a work in progress pet project that implements:
   * the routing logic maps the request to the related business logic 
   * the business logic just returns static html so far
 
-Eventually there will be
+Eventually there will be:
   * image responses
   * improved test infrastructure
   * a simple templating engine to generate HTML dynamically

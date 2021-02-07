@@ -18,23 +18,32 @@ from common import Response
 def generate_response(path):
     file_list = list_tree('./happy/public')
     for key, abs_path in enumerate(file_list):
+        # cut out 'public/' from paths
         file_list[key] = abs_path.replace('public/', '')
 
-    if is_image(path) and path in file_list:
+    # html -> 'text/html'
+    # css -> 'text/css'
+    # img -> 'image/img'
+    if has_file_ending(path) and path in file_list:
         file_path = path.split('.')
         file_ending = file_path[-1]
         images = ['ico', 'png', 'gif', 'jpg']
+        others = ['html', 'css']
         if file_ending in images:
             content_type = 'image/' + file_ending
-            response_code = 200
-            response_body = 'todo: send image code :)'
-            return Response(response_code, content_type, response_body)
+        elif file_ending in others:
+            content_type = 'text/' + file_ending
+        response_code = 200
+        public_path = path.replace('/happy', 'happy/public')
+        with open(public_path) as f:
+            response_body = f.read()
+        return Response(response_code, content_type, response_body)
     if path == '/':
         path = '/homepage'
     return resolve(path)
 
 
-def is_image(path):
-    if path.find('.') != -1:
+def has_file_ending(path):
+    if path.find('.') == -1:
         return False
-    return False
+    return True

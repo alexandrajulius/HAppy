@@ -13,6 +13,7 @@ def test_directory_tree():
             '/tests/fixtures/public/cats/cats.html',
             '/tests/fixtures/public/index.html',
             '/tests/fixtures/public/example2/example2.html',
+            '/tests/fixtures/public/css/style.css',
             '/tests/fixtures/public/img/happy.ico',
             '/tests/fixtures/public/hello/hello.html'
         ]

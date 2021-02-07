@@ -2,17 +2,53 @@
     <head>
         <title>Happy - Http Application in Python</title>
         <link rel="shortcut icon" href="http://localhost:8080/img/happy.ico">
-        <style>
-            body {
-              background-color: #000000;
-            }
-            p, h1 {
-                color: #ffffff;
-                font-family: "Source Code Pro", monospace;
-            }
-            </style>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/happy/css/style.css" />
     </head>
     <body>
-        <h1>Say Hello</h1>
+        <div class="container">
+            <div class="docs-section" id="grid">
+                <h1>Getting started</h1>
+                <div class="grid">
+                    <h3>Create a route:</h3>
+                    <div class="row">
+                        <div class="twelve columns">
+                            <p class="comment"># happy/config/routes.py</p>
+                            <p class="code">'cats/example': {</p>
+                            <p class="code indent">    
+                                'controller': '/happy/src/cats/controller/cats_controller.py'</p>
+                            <p class="code">}</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <h3>Create a controller:</h3>
+                    <div class="row">
+                        <div class="twelve columns">
+                            <p class="comment"># happy/src/cats/controller/cats_controller.py</p>
+                            <p class="code">from happy.src.cats.model.cats import call_cats</p>
+                            <p></p>
+                            <p class="code">def index():</p>
+                            <p class="code indent">return call_cats()</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <h3>Create your business logic:</h3>
+                    <div class="row">
+                        <div class="twelve columns">
+                            <p class="comment"># happy/src/cats/model/cats.py</p>
+                            <p class="code">def call_cats():</p>
+                            <p class="comment indent"># your business logic</p>
+                            <p class="code indent">with open('./happy/public/cats/example/example.html') as f:</p>
+                            <p class="code indent-twice">cats_html = f.read()</p>
+                            <p class="code indent">return cats_html</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </body>
 </html>

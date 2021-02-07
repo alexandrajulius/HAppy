@@ -53,6 +53,17 @@ def test_generate_response_for_invalid_html_request():
         )
     )
 
+
+def test_generate_response_for_css():
+    path = '/happy/css/style.css'
+    response = generate_response(path)
+    with open('./tests/fixtures/public/css/style.css') as body:
+        assert_that(response, equal_to(
+            Response(200, 'text/css', body.read())
+            )
+        )
+
+
 # TODO send images
 # @patch('happy_server.response.list_tree', return_value=[])
 # def test_generate_response_for_ico_request(mock_list_tree):
