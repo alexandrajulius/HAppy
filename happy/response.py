@@ -34,7 +34,7 @@ def generate_response(path):
         elif file_ending in others:
             content_type = 'text/' + file_ending
         response_code = 200
-        public_path = path.replace('/happy', 'happy/public')
+        public_path = path.replace('/happy/', 'happy/public/')
         with open(public_path) as f:
             response_body = f.read()
         return Response(response_code, content_type, response_body)
