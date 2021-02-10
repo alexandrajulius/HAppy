@@ -20,12 +20,12 @@ Start the http server on your local with
 ```
 $ python happy.py
 ```
-Then in your browser visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
+Then in your browser visit [http://localhost:8080/](http://localhost:8080/).
 
 By doing so, you are sending the first http request to your running server.
 The response will be:
 
-<img width="1023" alt="Screenshot 2021-02-08 at 13 53 57" src="https://user-images.githubusercontent.com/23189414/107222362-1ab72600-6a15-11eb-90f3-86101912776a.png">
+<img width="920" alt="Screenshot 2021-02-10 at 22 15 23" src="https://user-images.githubusercontent.com/23189414/107573269-98358e80-6bed-11eb-949d-7d66fc2827d3.png">
 
 Press the `Get Started` button and find a short documentation on how to create and use routes in HAppy.
 

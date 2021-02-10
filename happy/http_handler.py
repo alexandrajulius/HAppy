@@ -13,4 +13,4 @@ class Happy_Handler(server.BaseHTTPRequestHandler):
             self.send_response(response.response_code)
             self.send_header('Content-type', response.content_type)
             self.end_headers()
-            self.wfile.write(response.body.encode('utf-8'))
+            self.wfile.write(bytes(response.body))

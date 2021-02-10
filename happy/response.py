@@ -9,8 +9,6 @@ from common import Response
 # from happy.routing import resolve
 # from happy.common import Response
 
-
-# TODO content_type: text/plain and image
 # TODO signature does not work with types when starting server
 # def generate_response(path: str) -> Response:
 
@@ -21,9 +19,6 @@ def generate_response(path):
         # cut out 'public/' from paths
         file_list[key] = abs_path.replace('public/', '')
 
-    # html -> 'text/html'
-    # css -> 'text/css'
-    # img -> 'image/img'
     if has_file_ending(path) and path in file_list:
         file_path = path.split('.')
         file_ending = file_path[-1]
