@@ -47,7 +47,3 @@ but then you could not have a customised http handler.
 ```
 $ venv/bin/pytest -vvv
 ```
-
-## Author Contact
-[alexandra.julius@gmail.com](mailto:alexandra.julius@gmail.com)
-
